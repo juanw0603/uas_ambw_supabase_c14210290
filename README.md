@@ -37,11 +37,11 @@ Simple Recipe Keeper adalah aplikasi Flutter yang memungkinkan pengguna menyimpa
    Field
 
 
-   \| Field        | Type     |
-\|--------------|----------|
-\| id           | uuid (primary key, auto gen) |
-\| user\_id      | uuid (foreign key ke `auth.users`) |
-\| name         | text     |
-\| description  | text     |
-\| ingredients  | text     |
-\| created\_at   | timestamp (default: now()) |
+| Field        | Type     |
+|--------------|----------|
+| id           | uuid (primary key, auto gen) |
+| user\_id      | uuid (foreign key ke `auth.users`) |
+| name         | text     |
+| description  | text     |
+| ingredients  | text     |
+| created\_at   | timestamp (default: now()) |
