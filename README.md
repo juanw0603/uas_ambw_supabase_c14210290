@@ -1,3 +1,47 @@
-# uas_ambw_supabase
+# 🧾 Simple Recipe Keeper
 
-A new Flutter project.
+Simple Recipe Keeper adalah aplikasi Flutter yang memungkinkan pengguna menyimpan dan mengelola resep masakan pribadi. Aplikasi ini cocok untuk pengguna yang ingin mencatat resep favoritnya, baik yang sederhana maupun rumit.
+
+---
+
+## ✨ Fitur Aplikasi
+
+- **Autentikasi Pengguna**
+  - Login, Register, dan Logout menggunakan Supabase Auth
+- **Manajemen Resep**
+  - Tambah, Edit, dan Hapus resep
+  - Menyimpan nama, deskripsi, dan bahan-bahan resep
+- **Get Started Screen**
+  - Hanya muncul sekali saat pertama kali install
+- **Penyimpanan Sesi Login**
+  - Menggunakan SharedPreferences agar user tetap login
+- **Navigasi Halaman**
+  - Navigasi rapi menggunakan `Navigator`
+
+---
+
+## 🚀 Langkah Install & Build
+
+1. **Clone repo**
+   ```bash
+   git clone https://github.com/username/simple-recipe-keeper.git
+   cd simple-recipe-keeper
+2. **Install dependensi**
+   ```bash
+   flutter pub get
+ 
+3. **Setup Supabase**
+   Buat project di https://supabase.com
+
+   Buat table recipes:
+   Field
+
+
+   \| Field        | Type     |
+\|--------------|----------|
+\| id           | uuid (primary key, auto gen) |
+\| user\_id      | uuid (foreign key ke `auth.users`) |
+\| name         | text     |
+\| description  | text     |
+\| ingredients  | text     |
+\| created\_at   | timestamp (default: now()) |
