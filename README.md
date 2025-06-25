@@ -57,5 +57,5 @@ Simple Recipe Keeper adalah aplikasi Flutter yang memungkinkan pengguna menyimpa
 
 
 **dummy user**
-email : admin@gmail.com 
-password : password
+- email : admin@gmail.com 
+- password : password
