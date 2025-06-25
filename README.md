@@ -46,6 +46,19 @@ Simple Recipe Keeper adalah aplikasi Flutter yang memungkinkan pengguna menyimpa
 | ingredients  | text     |
 | created\_at   | timestamp (default: now()) |
 
+
+- note : setelah membuat query untuk recipes, jalankan perintah ini di sql editor supabase
+  ```bash
+  alter table public.recipes enable row level security;
+- tambahkan kebijakan untuk user login
+  ```bash
+  create policy "User can access own recipes only"
+  on public.recipes
+  for all
+  using (auth.uid() = user_id);
+
+
+
 4. **Edit environment Supabase**
    Buat file .env atau langsung ubah inisialisasi Supabase.initialize(...) di main.dart sesuai URL dan anon key milikmu.
 
